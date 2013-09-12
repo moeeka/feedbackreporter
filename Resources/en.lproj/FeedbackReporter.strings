@@ -41,7 +41,7 @@
 "Feedback Host Not Reachable" = "Feedback Host Not Reachable";
 
 /* Feedback message text */
-"Got a problem with %@?" = "Got an idea how to improve %@?";
+"Got a problem with %@?" = "Got a problem with %@?";
 
 /* */
 "OK" = "OK";
@@ -60,6 +60,8 @@
 
 /* Informative text for crash report */
 "Send crash report" = "To help us fix the problem, please send us this feedback report. Click Details to see what information is sent to us.";
+
+"Send problem" = "To help us fix the problem you are currently encountering, please complete and send us this feedback report. Click Details to see what information is sent to us.";
 
 /* */
 "Send details" = "Send details";

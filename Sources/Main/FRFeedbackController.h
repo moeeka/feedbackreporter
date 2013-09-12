@@ -18,6 +18,7 @@
 #import "FRUploader.h"
 
 #define FR_FEEDBACK  @"feedback"
+#define FR_PROBLEM   @"problem"
 #define FR_EXCEPTION @"exception"
 #define FR_CRASH     @"crash"
 

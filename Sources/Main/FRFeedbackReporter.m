@@ -112,6 +112,36 @@
     return YES;
 }
 
+- (BOOL) reportProblem
+{
+  FRFeedbackController *controller = [self feedbackController];
+  
+  @synchronized (controller) {
+    
+    if ([controller isShown]) {
+      NSLog(@"Controller already shown");
+      return NO;
+    }
+    
+    [controller reset];
+    
+    [controller setHeading:[NSString stringWithFormat:
+                            FRLocalizedString(@"Got a problem with %@?", nil),
+                            [FRApplication applicationName]]];
+    
+    [controller setSubheading:FRLocalizedString(@"Send problem", nil)];
+    
+    [controller setType:FR_PROBLEM];
+    
+    [controller setDelegate:delegate];
+    
+    [controller showWindow:self];
+    
+  }
+	
+  return YES;
+}
+
 - (BOOL) reportIfCrash
 {
     NSDate *lastCrashCheckDate = [[NSUserDefaults standardUserDefaults] valueForKey:DEFAULTS_KEY_LASTCRASHCHECKDATE];
