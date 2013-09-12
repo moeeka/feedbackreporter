@@ -383,6 +383,10 @@
 
     [dict setValidString:[FRApplication applicationVersion]
                   forKey:POST_KEY_VERSION];
+  
+    [dict setValidString:[FRApplication applicationName]
+                  forKey:POST_KEY_APPLICATION];
+
 
     if ([sendDetailsCheckbox state] == NSOnState) {
         if ([delegate respondsToSelector:@selector(customParametersForFeedbackReport)]) {
